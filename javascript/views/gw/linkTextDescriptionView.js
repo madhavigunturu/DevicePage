@@ -7,20 +7,11 @@ define([
 ], function ($, _, Backbone) {
     var LinkTextDescriptionView = Backbone.View.extend({
         el: '#c-linkTextDescription',
-        initialize: function () {
-            
-             
-        },
-        
-      
         render: function (html) {
-            var self = this;
            this.$el.html(html);
-		   $('.o-feature-text-description-close').show();
+		   $('.o-feature-text-description').show();
             return this;
         }
-        
     });
-
-    return LinkTextDescriptionView;
+	return LinkTextDescriptionView;
 });

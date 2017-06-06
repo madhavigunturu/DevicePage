@@ -1,0 +1,12 @@
+<ul class="contractNav floatLeft pad12 onlyBottomPad width100 border_CC onlyBottomBorder">
+	{{#each contractFilter}}
+		<li class="{{#if selected}}is-active{{/if}} color_66 inline margin48 onlyRightMargin">
+			<span class="contractFilterOptions bold" href="javascript:void(0);">
+				<input class="c-filterAjaxCtrl c-paymentFilter radioCustom is-hidden" data-url="{{#if url}}{{{url}}}{{/if}}" data-nav-state="{{{value}}}" id="contractRadio{{{@index}}}" name="contractRadio" type="radio" {{#if selected}}checked{{/if}}/> 
+				<label for="contractRadio{{{@index}}}" class="contractFilterOptions_label pointer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+					{{{name}}}
+				</label>
+			</span>
+		</li>
+	{{/each}}	
+</ul>

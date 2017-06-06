@@ -1,0 +1,13 @@
+{{#unless hideSort}}
+<span id="totalRecs-wrapper" class="gridwallLinks_sortTitle leftFloat">Sort by </span>
+<div class="noSidePad leftFloat gridwallLinks_sort">
+	<select id="sortDevices">
+		{{#each sortOptions}}
+			<option value="{{this.navigationState}}"
+				{{#if this.selected}} selected {{/if}} >
+			{{this.label}}
+			</option>
+		{{/each}}
+	</select>
+</div>
+{{/unless}}

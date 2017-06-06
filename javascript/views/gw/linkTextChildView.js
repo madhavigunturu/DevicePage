@@ -5,7 +5,7 @@ define([
     'underscore',
     'backbone',
     'views/gw/linkTextDescriptionView',
-    'text!templates/gw/linkTextTemplate.html'
+    'hbs!templates/gw/linkTextTemplate'
 ], function($, _, Backbone, LinkTextDescriptionView, LinkTextTemplate) {
     var LinkTextView = Backbone.View.extend({
         tagName: 'li',
@@ -16,7 +16,7 @@ define([
         events: {
             'click a': 'showLinkText'
         },
-        template: _.template(LinkTextTemplate),
+        template: LinkTextTemplate,
         render: function() {
             var self = this;
             _.each(this.model.toJSON(), function(value, key) {
@@ -31,6 +31,5 @@ define([
             this.linkTextDescriptionView.render($(e.target).data('linkText'));
         }
     });
-
-    return LinkTextView;
+	return LinkTextView;
 });
